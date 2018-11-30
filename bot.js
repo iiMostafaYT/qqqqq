@@ -183,6 +183,15 @@ collector7.on('collect', r => {
 
 
 
+client.on('ready', () => {//MRX - DEV
+//MRX - DEV
 
+  console.log(`${client.user.username} Is Online`);//MRX - DEV
+//MRX - DEV
+
+    client.user.setActivity('Welcome to Miracle server | -quran', {type: 'STREAMING '});//MRX - DEV
+//MRX - DEV
+
+  });
 
 client.login(process.env.BOT_TOKEN);
