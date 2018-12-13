@@ -7,15 +7,10 @@ const client = new Discord.Client();
 const fs = require('fs');
 const youtube = new YouTube(GOOGLE_API_KEY);
 const devs = ['478373875965755403', '478373875965755403'];
-const config = {
-    token : "NTE3NzY4MzcwNjAzNTU2ODY0.DuHBcA.2k1dXE9DXLqsTfM1O36mh4qArXU",
-    prefix : "-",
-    owner : ['478373875965755403'],
-};
 
 
 client.on('message', message => {
-    if(message.content.startsWith('-quran')) {
+    if(message.content.startsWith('$quran')) {
 		message.delete();
     const voiceChannel = message.member.voiceChannel;
     if (!voiceChannel) return message.reply(`**You Must be in Voice Channel**`);
